@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "concurrently \"vite\" \"cd server && npm run server\"",
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
     "build-only": "vite build",
@@ -16,6 +16,7 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "axios": "^1.15.2",
     "pinia": "^3.0.4",
     "vant": "^4.9.24",
     "vue": "^3.5.32",
@@ -31,6 +32,7 @@
     "@vitejs/plugin-vue-jsx": "^5.1.5",
     "@vue/eslint-config-typescript": "^14.7.0",
     "@vue/tsconfig": "^0.9.1",
+    "concurrently": "^9.2.1",
     "eslint": "^10.2.1",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-oxlint": "~1.60.0",
