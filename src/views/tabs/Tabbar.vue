@@ -1,4 +1,5 @@
 <template>
+  <RouterView />
   <van-tabbar v-model="active">
     <van-tabbar-item name="home" icon="home-o">首页</van-tabbar-item>
     <van-tabbar-item name="order" icon="bars">订单</van-tabbar-item>
@@ -7,9 +8,16 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-
-const active = ref('home')
+import { RouterView, useRoute, useRouter } from 'vue-router'
+import { ref, watch } from 'vue'
+const route = useRoute()
+const router = useRouter()
+const active = ref(route.name)
+watch(active, (newValue) => {
+  router.push({
+    name: newValue,
+  })
+})
 </script>
 
 <style scoped></style>
