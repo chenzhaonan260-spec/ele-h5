@@ -11,6 +11,7 @@ const app = createApp(App)
 app.use(createPinia())
 app.use(router)
 
+// 移动端样式适配
 const rootValue = 16
 
 // 设计稿宽度
