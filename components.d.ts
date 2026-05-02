@@ -14,6 +14,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    VanSearch: typeof import('vant/es')['Search']
     VanTabbar: typeof import('vant/es')['Tabbar']
     VanTabbarItem: typeof import('vant/es')['TabbarItem']
   }
@@ -23,6 +24,7 @@ declare module 'vue' {
 declare global {
   const RouterLink: typeof import('vue-router')['RouterLink']
   const RouterView: typeof import('vue-router')['RouterView']
+  const VanSearch: typeof import('vant/es')['Search']
   const VanTabbar: typeof import('vant/es')['Tabbar']
   const VanTabbarItem: typeof import('vant/es')['TabbarItem']
 }
