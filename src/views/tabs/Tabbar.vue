@@ -1,9 +1,11 @@
 <template>
   <RouterView />
-  <van-tabbar v-model="active">
-    <van-tabbar-item name="home" icon="home-o">首页</van-tabbar-item>
-    <van-tabbar-item name="order" icon="bars">订单</van-tabbar-item>
-    <van-tabbar-item name="my" icon="contact">我的</van-tabbar-item>
+  <van-tabbar v-model="active" class="tab-bar-container">
+    <van-tabbar-item name="home">首页</van-tabbar-item>
+    <van-tabbar-item name="mall">商城</van-tabbar-item>
+    <van-tabbar-item name="add" icon="add-square" color="black"></van-tabbar-item>
+    <van-tabbar-item name="message">消息</van-tabbar-item>
+    <van-tabbar-item name="my">我的</van-tabbar-item>
   </van-tabbar>
 </template>
 
@@ -20,4 +22,8 @@ watch(active, (newValue) => {
 })
 </script>
 
-<style scoped></style>
+<style scoped>
+.van-tabbar-item {
+  font-size: 16px;
+}
+</style>
